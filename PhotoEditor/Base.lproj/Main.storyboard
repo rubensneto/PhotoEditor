@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnZ-O8-ew1">
+                                <rect key="frame" x="0.0" y="145.5" width="375" height="375"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASs-r3-pA0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eu" translatesAutoresizingMaskIntoConstraints="NO" id="plV-J7-lEg">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="plV-J7-lEg" firstAttribute="centerY" secondItem="ASs-r3-pA0" secondAttribute="centerY" id="2RC-AR-3oy"/>
+                                            <constraint firstAttribute="trailing" secondItem="plV-J7-lEg" secondAttribute="trailing" id="6TJ-ED-BFQ"/>
+                                            <constraint firstAttribute="width" constant="375" id="Dgi-dX-29C"/>
+                                            <constraint firstItem="plV-J7-lEg" firstAttribute="leading" secondItem="ASs-r3-pA0" secondAttribute="leading" id="GLS-or-dy8"/>
+                                            <constraint firstAttribute="height" constant="375" id="VFZ-ag-Jcg"/>
+                                            <constraint firstItem="plV-J7-lEg" firstAttribute="centerX" secondItem="ASs-r3-pA0" secondAttribute="centerX" id="d0M-TF-IDH"/>
+                                            <constraint firstItem="plV-J7-lEg" firstAttribute="top" secondItem="ASs-r3-pA0" secondAttribute="top" id="k0L-eO-ho5"/>
+                                            <constraint firstAttribute="bottom" secondItem="plV-J7-lEg" secondAttribute="bottom" id="tCn-I8-4bz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HnZ-O8-ew1" secondAttribute="height" multiplier="1:1" id="EcO-Ss-ceS"/>
+                                    <constraint firstAttribute="trailing" secondItem="ASs-r3-pA0" secondAttribute="trailing" id="Nbs-6n-3uf"/>
+                                    <constraint firstAttribute="bottom" secondItem="ASs-r3-pA0" secondAttribute="bottom" id="Odp-NY-PiQ"/>
+                                    <constraint firstItem="ASs-r3-pA0" firstAttribute="top" secondItem="HnZ-O8-ew1" secondAttribute="top" id="kG5-yq-9FD"/>
+                                    <constraint firstItem="ASs-r3-pA0" firstAttribute="leading" secondItem="HnZ-O8-ew1" secondAttribute="leading" id="qcw-2b-C7Z"/>
+                                </constraints>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="tky-RE-VvR">
+                                <rect key="frame" x="120" y="550.5" width="135" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTu-0d-Jyh">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Right">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rotateClockwise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OqF-oa-Fka"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-sm-Zcy">
+                                        <rect key="frame" x="57" y="0.0" width="30" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Left">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rotateAnticlockwise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNC-DK-4of"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evx-HR-1Qv">
+                                        <rect key="frame" x="105" y="0.0" width="30" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Flip">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="flip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wo7-ro-yzh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HnZ-O8-ew1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1cx-TS-kMJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HnZ-O8-ew1" secondAttribute="trailing" id="4zY-bg-Gpi"/>
+                            <constraint firstItem="tky-RE-VvR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gEz-Va-ANs"/>
+                            <constraint firstItem="tky-RE-VvR" firstAttribute="top" secondItem="HnZ-O8-ew1" secondAttribute="bottom" constant="30" id="hhg-yi-PMW"/>
+                            <constraint firstItem="HnZ-O8-ew1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mcC-Zj-ekV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="ASs-r3-pA0" id="fFq-im-VHS"/>
+                        <outlet property="containerViewHeightConstraint" destination="VFZ-ag-Jcg" id="SW0-KC-7PR"/>
+                        <outlet property="containerViewWidthConstraint" destination="Dgi-dX-29C" id="mI4-Fw-lz0"/>
+                        <outlet property="imageView" destination="plV-J7-lEg" id="yq3-o2-Dyg"/>
+                        <outlet property="scrollView" destination="HnZ-O8-ew1" id="WjR-aB-KAO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eu" width="960" height="1280"/>
+    </resources>
+</document>
