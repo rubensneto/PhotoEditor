@@ -29,12 +29,14 @@ class MotherFuckerViewController: UIViewController, UIScrollViewDelegate {
     //MARK: User Actions
     
     @IBAction func rotateClockwise(_ sender: UIButton) {
-        rotationAngle += 0.5
+        isFlipped == true ? (rotationAngle -= 0.5) : (rotationAngle += 0.5)
+        resetRotationAngle()
         rotateImage(rotationAngle: rotationAngle)
     }
     
     @IBAction func rotateAnticlockwise(_ sender: UIButton) {
-        rotationAngle -= 0.5
+        isFlipped == true ? (rotationAngle += 0.5) : (rotationAngle -= 0.5)
+        resetRotationAngle()
         rotateImage(rotationAngle: rotationAngle)
     }
     
@@ -65,6 +67,23 @@ class MotherFuckerViewController: UIViewController, UIScrollViewDelegate {
         var transform = CGAffineTransform.identity
         transform = transform.rotated(by: rotationAngle * .pi)
         rotationView.transform = transform
+    }
+    
+    func resetRotationAngle(){
+        if rotationAngle == 2 || rotationAngle == -2 {
+            rotationAngle = 0
+        }
+        switch rotationAngle {
+        case -0.5: rotationAngle = 1.5
+        case -1: rotationAngle = 1
+        case -1.5: rotationAngle = -0.5
+        default: rotationAngle = 0
+        }
+        
+    }
+    
+    func saveImage(){
+
     }
 }
 

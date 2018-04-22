@@ -380,7 +380,6 @@
                                         <state key="normal" title="Right"/>
                                         <connections>
                                             <action selector="rotateClockwise:" destination="yuN-0H-k4K" eventType="touchUpInside" id="dnG-Df-qZs"/>
-                                            <action selector="rotateClocwise:" destination="aHS-l3-Mdc" eventType="touchUpInside" id="Dud-SA-5ct"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwN-PN-Rn2">
@@ -388,7 +387,6 @@
                                         <state key="normal" title="Left"/>
                                         <connections>
                                             <action selector="rotateAnticlockwise:" destination="yuN-0H-k4K" eventType="touchUpInside" id="40p-D2-YMc"/>
-                                            <action selector="rotateAnticlockwise:" destination="aHS-l3-Mdc" eventType="touchUpInside" id="bUb-gu-wYy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z4-Ie-0zI">
